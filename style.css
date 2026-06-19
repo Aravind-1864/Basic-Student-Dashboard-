@@ -1,0 +1,294 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f1f5f9;
+}
+
+/* Links */
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Layout */
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+    width:260px;
+    min-height:100vh;
+    background:#1e293b;
+    padding:25px;
+    position:sticky;
+    top:0;
+}
+
+.sidebar h2{
+    color:white;
+    margin-bottom:35px;
+    font-size:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:14px;
+    margin:12px 0;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:#334155;
+    transform:translateX(5px);
+}
+
+/* Main Content */
+.main-content{
+    flex:1;
+    padding:35px;
+}
+
+.main-content h1{
+    font-size:42px;
+    color:#1e293b;
+    margin-bottom:8px;
+}
+
+.main-content > p{
+    color:#64748b;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    font-size:22px;
+    color:#1e293b;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+/* Timetable */
+.timetable{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+.timetable h2{
+    color:#1e293b;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.timetable table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.timetable th{
+    background:#1e293b;
+    color:white;
+    padding:15px;
+    text-align: center;
+    border:1px solid #e2e8f0;
+}
+
+.timetable td{
+    padding:15px;
+    border:1px solid #e2e8f0;
+}
+
+.timetable tr:hover{
+    background:#f8fafc;
+}
+
+.timetable table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.timetable th,
+.timetable td{
+    border:1px solid #cbd5e1;
+}
+
+.attendance-section{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.attendance-section h2{
+    margin-bottom:15px;
+}
+
+.progress-bar{
+    width:100%;
+    height:20px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    width:90%;
+    height:100%;
+    background:#26c004;
+    border-radius:20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.progress:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+}
+
+.progress{
+    width:90%;
+    animation:fillBar 2s ease-in-out;
+}
+
+@keyframes fillBar{
+    from{
+        width:0;
+    }
+
+    to{
+        width:90%;
+    }
+}
+
+.attendance-section p{
+    margin-top:10px;
+    font-weight:bold;
+    color:#1e293b;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#64748b;
+    border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .main-content h1{
+        font-size:32px;
+    }
+}
+
+.notifications{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.notifications h2{
+    color:#1e293b;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.notifications ul{
+    list-style:none;
+}
+
+.notification{
+    padding:15px;
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+
+.notification p{
+    color:#1e293b;
+    font-size:16px;
+}
+
+.exams{
+    margin-top: 30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0, 0.08);
+}
+
+.exams h2{
+    color:#1e293b;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.exams ul{
+    list-style:none;
+}
+
+.exam{
+    padding:15px;
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    margin-bottom:15px;
+    border-radius:8px;
+}
